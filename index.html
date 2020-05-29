@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Rock Paper Scissors</title>
+</head>
+<body>
+    <script>
+        const selection = ["Rock", "Paper", "Scissors"];
+        const computerSelection = computerPlay();
+        const playerSelection = 'rock';
+        function computerPlay(){
+            let index = Math.floor(Math.random() * Math.floor(3));
+            let compPick = selection[index]; 
+
+            return compPick;
+        }
+
+        function playAround(){
+            let playerPick = playerSelection[0].toUpperCase() + playerSelection.substr(1).toLowerCase();
+            let valid = 0;
+            for(i=0; i<3; i++){
+                if(playerPick === selection[i]){
+                    valid = 1;
+                    break;
+                }
+                else{
+                    valid = 0;
+                }
+            }
+
+            if(valid = 0){
+                alert("Your input is invalid !!");
+            }
+            
+            
+
+        }
+
+        playAround();
+    </script>
+</body>
+</html>
